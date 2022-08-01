@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ItensModel;
 
 class Cardapio extends BaseController
 {
@@ -15,7 +16,7 @@ class Cardapio extends BaseController
     
     public function index()
     {
-        return view('cardapio',[
+        return view('Cardapio',[
             "itens" => $this->itensModel->findAll()
         ]);
     }
