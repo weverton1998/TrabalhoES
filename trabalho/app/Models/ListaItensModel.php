@@ -4,20 +4,19 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ItensModel extends Model
+class ListaItensModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'itens';
-    protected $primaryKey       = 'idItem';
+    protected $table            = 'ListaItens';
+    protected $primaryKey       = 'idLista';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nome',
-        'preco',
-        'descricao'
+        'idPedido',
+        'idItem'
     ];
 
     // Dates

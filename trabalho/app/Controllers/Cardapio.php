@@ -1,23 +1,22 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Controllers\BaseController;
-use App\Models\ItensModel;
 
 class Cardapio extends BaseController
 {
-    private $itensModel;
+    private $itens;
     
     public function __construct()
     {
-        $this->itensModel = new ItensModel();
+        $this->itens = new Itens();
     }
     
     public function index()
     {
-        return view('Cardapio',[
-            "itens" => $this->itensModel->findAll()
+        echo view('nav');
+        echo view('cardapio',[
+            "itens" => $this->itens->traserItens()
         ]);
     }
+
 }

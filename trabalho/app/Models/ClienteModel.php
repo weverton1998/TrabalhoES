@@ -4,11 +4,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ItensModel extends Model
+class ClienteModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'itens';
-    protected $primaryKey       = 'idItem';
+    protected $table            = 'cliente';
+    protected $primaryKey       = 'idCliente';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
@@ -16,8 +16,8 @@ class ItensModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'nome',
-        'preco',
-        'descricao'
+        'cpf',
+        'idade'
     ];
 
     // Dates
