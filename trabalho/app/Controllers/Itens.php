@@ -27,7 +27,8 @@ class Itens extends BaseController
         echo view('nav');
         echo view('formItens',[
             'acao' => '/Itens/resultadoNovoCadastro',
-			'titulo' => 'Insira os dados'
+			'titulo' => 'Insira os dados',
+			'top' => 'cadrastrar'
         ]);
     }
     

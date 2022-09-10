@@ -35,7 +35,8 @@ class Cliente extends BaseController
         echo view('nav');
         echo view('formUser',[
             'acao' => '/Cliente/resultadoNovoCadastro',
-			'titulo' => 'Insira seus dados'
+			'titulo' => 'Insira seus dados',
+			'top' => 'cadrastrar'
         ]);
     }
     

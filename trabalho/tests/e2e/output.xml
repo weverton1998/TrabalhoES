@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220831 00:26:43.246" rpa="false" schemaversion="3">
+<suite id="s1" name="Bergamota" source="C:\Users\wevet\OneDrive\Área de Trabalho\trabalhoES\trabalho\tests\e2e\bergamota.robot">
+<test id="s1-t1" name="Titulo" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220831 00:26:43.575" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220831 00:26:43.574" endtime="20220831 00:26:46.333"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cardapio</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220831 00:26:46.346" level="INFO">Page title is 'Cardapio'.</msg>
+<status status="PASS" starttime="20220831 00:26:46.338" endtime="20220831 00:26:46.346"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220831 00:26:46.347" endtime="20220831 00:26:48.540"/>
+</kw>
+<status status="PASS" starttime="20220831 00:26:43.573" endtime="20220831 00:26:48.540"/>
+</test>
+<test id="s1-t2" name="Cadastrar" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220831 00:26:48.544" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220831 00:26:48.544" endtime="20220831 00:26:51.011"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:51.014" level="INFO">Clicking element 'xpath=/html/body/div/a'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.012" endtime="20220831 00:26:51.489"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cadastrar</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220831 00:26:51.504" level="INFO">Page title is 'Cadastrar'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.490" endtime="20220831 00:26:51.504"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=nome</arg>
+<arg>laranja</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:51.506" level="INFO">Typing text 'laranja' into text field 'name=nome'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.505" endtime="20220831 00:26:51.681"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=descricao</arg>
+<arg>fruta</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:51.684" level="INFO">Typing text 'fruta' into text field 'name=descricao'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.683" endtime="20220831 00:26:51.825"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=preco</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:51.826" level="INFO">Typing text '10' into text field 'name=preco'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.826" endtime="20220831 00:26:51.944"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:51.946" level="INFO">Clicking element 'name=submit'.</msg>
+<status status="PASS" starttime="20220831 00:26:51.945" endtime="20220831 00:26:52.377"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${menssagem}</var>
+<arg>xpath=/html/body/div/div</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20220831 00:26:52.400" level="INFO">${menssagem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="b1d2460b0d15178e1872d472799cf832", element="d38cbbae-3592-4bf6-bf8a-d91ecb357d13")&gt;</msg>
+<status status="PASS" starttime="20220831 00:26:52.380" endtime="20220831 00:26:52.400"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${menssagem.text}</arg>
+<arg>Cadastrado com sucesso!</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220831 00:26:52.401" endtime="20220831 00:26:52.435"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220831 00:26:52.436" endtime="20220831 00:26:54.591"/>
+</kw>
+<status status="PASS" starttime="20220831 00:26:48.542" endtime="20220831 00:26:54.594"/>
+</test>
+<test id="s1-t3" name="Editar Item" line="25">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220831 00:26:54.599" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220831 00:26:54.599" endtime="20220831 00:26:57.409"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/table/tbody/tr[2]/td[4]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:57.416" level="INFO">Clicking element 'xpath=/html/body/div/table/tbody/tr[2]/td[4]/a[1]'.</msg>
+<status status="PASS" starttime="20220831 00:26:57.416" endtime="20220831 00:26:57.968"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Cadastrar</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220831 00:26:57.984" level="INFO">Page title is 'Cadastrar'.</msg>
+<status status="PASS" starttime="20220831 00:26:57.971" endtime="20220831 00:26:57.984"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=nome</arg>
+<arg>banana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:57.988" level="INFO">Typing text 'banana' into text field 'name=nome'.</msg>
+<status status="PASS" starttime="20220831 00:26:57.988" endtime="20220831 00:26:58.181"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=descricao</arg>
+<arg>fruta</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:58.184" level="INFO">Typing text 'fruta' into text field 'name=descricao'.</msg>
+<status status="PASS" starttime="20220831 00:26:58.183" endtime="20220831 00:26:58.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=preco</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:58.370" level="INFO">Typing text '20' into text field 'name=preco'.</msg>
+<status status="PASS" starttime="20220831 00:26:58.369" endtime="20220831 00:26:58.520"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name=submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 00:26:58.522" level="INFO">Clicking element 'name=submit'.</msg>
+<status status="PASS" starttime="20220831 00:26:58.522" endtime="20220831 00:26:58.973"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${menssagem}</var>
+<arg>xpath=/html/body/div/div</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20220831 00:26:59.008" level="INFO">${menssagem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c7874df2dcad78546a18b0a9b7a7930d", element="b5d26975-9c26-4a42-a06c-fe37dbd522cf")&gt;</msg>
+<status status="PASS" starttime="20220831 00:26:58.979" endtime="20220831 00:26:59.008"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${menssagem.text}</arg>
+<arg>Cadastrado com</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220831 00:26:59.008" endtime="20220831 00:26:59.065"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220831 00:26:59.067" endtime="20220831 00:27:01.289"/>
+</kw>
+<status status="PASS" starttime="20220831 00:26:54.597" endtime="20220831 00:27:01.290"/>
+</test>
+<test id="s1-t4" name="Excluir Item" line="37">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220831 00:27:01.297" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/'.</msg>
+<status status="PASS" starttime="20220831 00:27:01.296" endtime="20220831 00:27:03.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div/table/tbody/tr[2]/td[4]/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 00:27:03.581" level="INFO">Clicking element 'xpath=/html/body/div/table/tbody/tr[2]/td[4]/a[2]'.</msg>
+<status status="PASS" starttime="20220831 00:27:03.581" endtime="20220831 00:27:04.093"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${menssagem}</var>
+<arg>xpath=/html/body/div/div</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20220831 00:27:04.119" level="INFO">${menssagem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="db330d6456806309b1f3ba353b599267", element="9550849b-a209-4366-836e-302903b5220b")&gt;</msg>
+<status status="PASS" starttime="20220831 00:27:04.096" endtime="20220831 00:27:04.119"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${menssagem.text}</arg>
+<arg>item Excluído com Sucesso</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220831 00:27:04.120" endtime="20220831 00:27:04.159"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220831 00:27:04.160" endtime="20220831 00:27:07.456"/>
+</kw>
+<status status="PASS" starttime="20220831 00:27:01.294" endtime="20220831 00:27:07.457"/>
+</test>
+<status status="PASS" starttime="20220831 00:26:43.250" endtime="20220831 00:27:07.460"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Bergamota">Bergamota</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -11,6 +11,7 @@
 
 <body>
     <div class="container mt-5 text-center" style="width: 40%;">
+        <h2><?=$titulo?></h2>
         <div class="form-group mb-3">
             <label for="email">Email</label>
             <input type="text" name="email" id="email" class="form-control">
